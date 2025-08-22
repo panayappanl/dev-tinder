@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-import { BASE_URL, feedSampleData } from "../utils/constants";
+import { BASE_URL, sampleFeedData } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addFeed } from "../utils/feedSlice";
 import UserCard from "./UserCard";
@@ -20,7 +20,7 @@ const Feed = () => {
         withCredentials: true,
       });
       dispatch(
-        addFeed(res.data?.data?.length ? res.data?.data : feedSampleData)
+        addFeed(res.data?.data?.length ? res.data?.data : sampleFeedData)
       );
     } catch (error) {
       console.log(error);

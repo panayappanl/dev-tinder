@@ -18,9 +18,7 @@ const Requests = () => {
         withCredentials: true,
       });
 
-      dispatch(
-        addRequest(res.data?.data.length ? res.data?.data : sampleRequestsData)
-      );
+      dispatch(addRequest(res.data?.data));
     } catch (error) {
       console.log(error);
     }

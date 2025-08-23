@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { BASE_URL, sampleConnectionsData } from "../utils/constants";
+import React, { useEffect } from "react";
+import { BASE_URL } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../utils/connectionSlice";
 
@@ -18,11 +18,7 @@ const Connections = () => {
         withCredentials: true,
       });
       console.log(res.data?.data);
-      dispatch(
-        addConnections(
-          res.data?.data.length ? res.data?.data : sampleConnectionsData
-        )
-      );
+      dispatch(addConnections(res.data?.data));
     } catch (error) {
       console.log(error);
     }

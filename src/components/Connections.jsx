@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BASE_URL, sampleConnectionsData } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../utils/connectionSlice";
@@ -7,10 +7,9 @@ import { addConnections } from "../utils/connectionSlice";
 const Connections = () => {
   const dispatch = useDispatch();
   const connections = useSelector((store) => store.connection);
+
   useEffect(() => {
-    if (!connections) {
-      fetchConnections();
-    }
+    fetchConnections();
   }, []);
 
   const fetchConnections = async () => {

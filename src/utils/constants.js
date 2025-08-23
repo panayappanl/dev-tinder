@@ -75,3 +75,20 @@ export const sampleConnectionsData = [
     skills: ["Figma", "Adobe XD", "HTML", "CSS", "JavaScript"],
   },
 ];
+
+export const sampleRequestsData = [
+  {
+    _id: "1",
+    fromUserId: {
+      firstName: "Deepika",
+      lastName: "Padukone",
+      profilePicture:
+        "https://upload.wikimedia.org/wikipedia/commons/3/35/Deepika_Padukone_promoting_Chhapaak.jpg",
+      age: 33,
+      gender: "female",
+      about:
+        "Frontend Developer with 7 years of experience specializing in React and modern UI frameworks.",
+      skills: ["React", "TypeScript", "Redux", "TailwindCSS"],
+    },
+  },
+];
